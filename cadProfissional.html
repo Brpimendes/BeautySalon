@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Profissionais</title>
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="out-container">
+        <header>
+            <div class="menu-fixed">
+                <div class="contacts">
+                    <div class="logo">
+                        <img src="img/logo.png" alt="logo salão Beauty">
+                    </div>
+    
+                    <div class="direct-contacts">
+                        <span class="material-icons">local_phone</span> <p> (21)2404-0695 </p>
+                        <span class="material-icons">mail</span> <p> E-mail: beauty_salao@gmail.com </p>
+                    </div>
+    
+                    <div class="hamburguer">
+                        <span class="material-icons">menu</span>
+                    </div>
+    
+                    <nav>
+                        <ul>
+                            <li><span class="material-icons">logout</span><a href="index.html">Sair</a></li>
+                            <li><span class="material-icons">person_pin</span><a href="principal.html">Página Principal</a></li>
+                            <li><span class="material-icons">attach_money</span><a href="tabelaPreco.html">Tabela de Preços</a></li>
+                            <li><span class="material-icons">shopping_cart</span><a href="#contact">Carrinho</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main> 
+            <div class="menu-lateral">
+                <nav>
+                    <ul>
+                        <li><a href="/cadastro.html"> Meu Perfil</a></li> 
+                        <li><a href="/agendamento.html"> Meus Agendamentos</a></li>
+                        <li><a href="cadCliente.html">Cadastro de Cliente</a></li>
+                        <li><a href="cadFuncao.html">Cadastrar Função</a></li>
+                        <li><a href="cadProfissional.html">Cadastrar Profissional</a></li>
+                        <li><a href="cadServico.html">Cadastrar Serviço</a></li>
+                        <li><a href="/">Relatórios</a></li>
+                        <li><a href="cadProfissionalFuncao.php">Relação Profissional Função</a></li>
+                        <li><a href="cadFormaPagamento">Caixa</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="main-container">
+                <div class="cadastro-form">
+                    <form class="form" action="post">
+                        <input type="hidden" name="id" value="<?php echo $profissional->profissional_id ?>">
+
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" value="<?php echo $profissional->nome ?>" /> <br>
+
+                        <label for="data_nasc">Data Nascimento</label>
+                        <input type="date" name="data_nasc" value="<?php echo $profissional->data_nasc ?>" /> <br>
+
+                        <label for="cpf">CPF</label>
+                        <input type="text" name="cpf" value="<?php echo $profissional->cpf ?>" /> <br>
+
+                        <label for="telefone">Telefone</label>
+                        <input type="text" name="telefone" value="<?php echo $profissional->telefone ?>" /> <br>
+
+                        <label for="email">Email</label>
+                        <input type="email" name="email" value="<?php echo $profissional->email ?>" /> <br>
+
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha"> <br>
+
+                        <button name="acao" value="cadastrar">Cadastrar</button>
+                        <button name="acao" value="listar">Listar</button>
+                        <button name="acao" value="alterar">Alterar</button>
+                    </form>
+                </div>
+
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Data de Nascimento</th>
+                                <th>CPF</th>
+                                <th>Telefone</th>
+                                <th>Email</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Creuza Barneta</td>
+                                <td>15/06/1925</td>
+                                <td>12312312312</td>
+                                <td>964522585</td>
+                                <td>creuzinha@mail.com</td>
+                                <td>
+                                    <form method='post'>
+                                        <input type='hidden' name='id' value='{$serv->servicos_id}' />
+                                        <div class='material' id='excluir'>
+                                            <span class='material-icons'>delete_forever</span>
+                                            <button name='acao' value='excluir'>Excluir</button>
+                                        </div>
+                                        <div class='material'>
+                                            <span class='material-icons carregar'>upgrade</span>
+                                            <button name='acao' value='carregar'>Carregar</button>
+                                        </div>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

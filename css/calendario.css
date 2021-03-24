@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-conteudo{
+    display: grid;
+    grid-template-areas: "titulo titulo"
+                         "calendario opcao"
+                         "calendario opcao";
+}
+
+.container-conteudo span{
+    grid-area: titulo;
+    display: block;
+    margin: 15px 0;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.calendario-table{
+    grid-area: calendario;
+    margin: 0 auto;
+    width: 70%;
+    border-collapse: collapse;
+}
+
+.calendario-table .calendario-tr.calendario-header:first-child{
+    background-color: #610d75;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.calendario-table .calendario-tr.calendario-header:nth-child(2){
+    background-color: #d281e6;
+    color: #fff;
+    font-weight: bold;
+}
+
+td.calendario-td{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+td.calendario-td:empty{
+    background-color: #ddd;
+}
+
+td.calendario-td:hover{
+    background-color: #abcdef;
+}
+
+td.calendario-td5{
+    text-transform: capitalize;
+}
+
+td.calendario-td.selecionado{
+    background-color: #fda2a2;
+}
+
+.agendamento-form{
+    grid-area: opcao;
+    width: 100%;
+}
+
+.agendamento-form .form{
+    display: flex;
+    flex-direction: column;
+}
+
+.agendamento-form .form label{
+    width: 100%;
+    margin: 15px 0;
+    position: relative;
+}
+
+.agendamento-form .form label select{
+    width: 55%;
+    display: inline-block;
+    position: absolute;
+    right: 122px;
+    top: 0;
+}
+
+.agendamento-form .form label input{
+    width: 55%;
+    display: inline-block;
+    position: absolute;
+    right: 122px;
+    top: 0;
+    padding: 5px;
+    text-align: center;
+}
+
+.agendamento-form .form button{
+    width: 83%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d281e6;
+    color: #fff;
+    font-size: 20px;
+    transition: all .224s ease;
+    display: grid;
+    margin: 10px 0;
+}
+
+.agendamento-form .form button:hover{
+    background-color: #5d2e69;
+    font-weight: bold;
+}
+
+@media all and (min-width: 480px) and (max-width:720px){
+    .container-conteudo{
+        display: grid;
+        grid-template-areas: unset;
+        grid-template-columns: 1fr
+    }
+
+    .container-conteudo span{
+        grid-area: unset;
+        display: block;
+        margin: 15px 0;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .calendario-table{
+        grid-area: unset;
+        margin: 0 auto;
+        width: 80%;
+        border-collapse: collapse;
+    }
+    
+    .calendario-table .calendario-tr.calendario-header:first-child{
+        background-color: #610d75;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .calendario-table .calendario-tr.calendario-header:nth-child(2){
+        background-color: #d281e6;
+        color: #fff;
+        font-weight: bold;
+    }
+    
+    td.calendario-td{
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        text-align: center;
+    }
+    
+    td.calendario-td:empty{
+        background-color: #ddd;
+    }
+    
+    td.calendario-td:hover{
+        background-color: #abcdef;
+    }
+    
+    td.calendario-td5{
+        text-transform: capitalize;
+    }
+    
+    td.calendario-td.selecionado{
+        background-color: #fda2a2;
+    }
+    
+    .agendamento-form{
+        grid-area: unset;
+        width: 100%;
+    }
+    
+    .agendamento-form .form{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .agendamento-form .form label{
+        width: 100%;
+        margin: 15px 0;
+        position: relative;
+    }
+    
+    .agendamento-form .form label select{
+        width: 55%;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    
+    .agendamento-form .form label input{
+        width: 55%;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 5px;
+        text-align: center;
+    }
+    
+    .agendamento-form .form button{
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #d281e6;
+        color: #fff;
+        font-size: 20px;
+        transition: all .224s ease;
+        display: grid;
+        margin: 10px 0;
+    }
+    
+    .agendamento-form .form button:hover{
+        background-color: #5d2e69;
+        font-weight: bold;
+    }
+}

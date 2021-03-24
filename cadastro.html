@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Beauty Cadastramento</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/cadastro.js"></script>
+</head>
+<body>
+    <div class="container-cadastro"> 
+        <div class="container-conteudo"> 
+            <div class="cadastro-img"> 
+                <img src="img/cabelo1.jpg">
+            </div>
+            <div class="cadastro-form">
+                <span>Faça seu Cadastro</span>
+                <form class="form">
+                    <input id="nome" type="text" placeholder="Digite seu nome">
+                    <input id="cpf" type="text" placeholder="Digite seu cpf">
+                    <Label>
+                        <span>Sexo:</span>
+                        <select name="" id="sexo">
+                            <option value="F" >Feminino</option>
+                            <option value="M" selected>Masculino</option>
+                        </select>
+                    </Label>
+                    <input id="dataNasc" type="date" placeholder="Digite a data de nascimento">
+                    <input id="telefone" type="text" placeholder="Digite seu telefone">
+                    <input id="email" type="email" placeholder="E-mail">
+                    <input id="senha" type="password" placeholder="Insira uma senha">
+                    <input id="repSenha" type="password" placeholder="Repita a senha">
+                    <button> Cadastrar </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

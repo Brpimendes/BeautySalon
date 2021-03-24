@@ -1,0 +1,67 @@
+/* ESTILO DO FORMULÁRIO */
+main{
+    height: 80vh;
+    margin: 30px;
+}
+
+main div.login-form{
+    margin: 05vh auto;
+    width: 50%;
+}
+
+main div.login-form form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #fff;
+}
+
+main div.login-form form div.form-pics img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+main div.login-form form div.login-form-det{
+    background-color: #a000b6;
+    padding: 10px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+main div.login-form form div.login-form-det h1{
+    margin: 15px;
+    text-align: center;
+}
+
+main div.login-form form div.login-form-det input{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background-color: transparent;
+    margin: 10px auto;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+}
+
+main div.login-form form div.login-form-det button{
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #670080;
+    color: #fff;
+}
+
+main div.login-form form div.login-form-det .bars{
+    display: block;
+    width: 90%;
+    border-bottom: 1px solid #fff8;
+    margin: 30px auto;
+}

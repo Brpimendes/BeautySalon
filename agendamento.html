@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Agendamento</title>
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/calendario.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/calendario.js"></script>
+</head>
+<body>
+    <div class="out-container"> 
+        <header>
+            <div class="menu-fixed">
+                <div class="contacts">
+                    <div class="logo">
+                        <img src="img/logo.png" alt="logo salão Beauty">
+                    </div>
+    
+                    <div class="direct-contacts">
+                        <span class="material-icons">local_phone</span> <p> (21)2404-0695 </p>
+                        <span class="material-icons">mail</span> <p> E-mail: beauty_salao@gmail.com </p>
+                    </div>
+    
+                    <div class="hamburguer">
+                        <span class="material-icons">menu</span>
+                    </div>
+    
+                    <nav>
+                        <ul>
+                            <li><span class="material-icons">logout</span><a href="index.html">Sair</a></li>
+                            <li><span class="material-icons">person_pin</span><a href="principal.html">Página Principal</a></li>
+                            <li><span class="material-icons">attach_money</span><a href="tabelaPreco.html">Tabela de Preços</a></li>
+                            <li><span class="material-icons">shopping_cart</span><a href="#contact">Carrinho</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="menu-lateral">
+                <nav>
+                    <ul>
+                        <li><a href="/cadastro.html"> Meu Perfil</a></li> 
+                        <li><a href="/agendamento.html"> Meus Agendamentos</a></li>
+                        <li><a href="/cadCliente.html">Cadastro de Cliente</a></li>
+                        <li><a href="cadFuncao.html">Cadastrar Função</a></li>
+                        <li><a href="cadProfissional.html">Cadastrar Profissional</a></li>
+                        <li><a href="cadServico.html">Cadastrar Serviço</a></li>
+                        <li><a href="/">Relatórios</a></li>
+                        <li><a href="cadProfissionalFuncao.html">Relação Profissional Função</a></li>
+                        <li><a href="cadFormaPagamento.html">Caixa</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="main-container">
+                <div class="container-conteudo">
+                    <span>Agende seu serviço aqui!</span>
+
+                    <calendario id="calendario1"></calendario>
+
+                    <div class="agendamento-form">
+                        <form class="form" method="post">
+                            <label for="">Data agendamento
+                                <input type="date" placeholder="Escolha uma data">
+                            </label>
+                            
+                            <label for="">Escolha o Serviço
+                                <select name="servico" id="">
+                                    <option value=""></option>
+                                    <option value="">Escova</option>
+                                    <option value="">Corte</option>
+                                </select>
+                            </label>
+                            
+                            <label for="">Escolha o Profissional
+                                <select name="profissional" id="">
+                                    <option value="profissional"></option>
+                                    <option value="">Carla</option>
+                                    <option value="">Sueli</option>
+                                </select>
+                            </label>
+
+                            <label for=""> Horário
+                                <input type="time" placeholder="horário">           
+                            </label>
+
+                            <button> Agendar </button>
+                        </form>                       
+                    </div>
+                </div>
+
+                <div class="historico-agendamento">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Dia</th>
+                                <th>hora</th>
+                                <th>Serviço</th>
+                                <th>Profissional</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>27/03/2021</td>
+                                <td>10:00</td>
+                                <td>Escova</td>
+                                <td>Carla Moreira</td>
+                                <td><span class="material-icons concluido">check_circle</span></td>
+                            </tr>
+                            <tr>
+                                <td>28/03/2021</td>
+                                <td>11:00</td>
+                                <td>Escova</td>
+                                <td>Sueli</td>
+                                <td><span class="material-icons concluido">check_circle</span></td>
+                            </tr>
+                            <tr>
+                                <td>30/03/2021</td>
+                                <td>14:00</td>
+                                <td>Tricotomia</td>
+                                <td>Suellen</td>
+                                <td><span class="material-icons andamento">watch_later</span></td>
+                            </tr>
+                            <tr>
+                                <td>15/04/2021</td>
+                                <td>16:00</td>
+                                <td>Pé</td>
+                                <td>Suellen</td>
+                                <td><span class="material-icons cancelado">cancel</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

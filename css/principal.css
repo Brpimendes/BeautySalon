@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    display: inline;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+.out-container{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ESTILO DO CABEÇALHO */
+header{
+    width: 100vw;
+}
+
+header .menu-fixed{
+    position: fixed;
+    z-index: 1;
+}
+
+header div.contacts{
+    height: 80px;
+    width: 100vw;
+    color: #fff;
+    background-color: #610d75;
+    position: relative;
+}
+
+header div.contacts .logo{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+}
+
+header div.contacts .logo img{
+    display: inline;
+    width: 100%;
+    height: 100%;
+    filter: brightness(10);
+}
+
+header div.contacts .direct-contacts{
+    display: inline;
+    position: absolute;
+    top: 30px;
+    margin-left: 30px;
+}
+
+header div.contacts .direct-contacts span.material-icons{
+    margin-left: 40px;
+}
+
+header div.contacts .direct-contacts p{
+    display: inline-block;
+    transform: translateY(-5px);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header div.contacts .hamburguer{
+    display: none;
+}
+
+header div.contacts nav{
+    position: absolute;
+    top: 30px;
+    right: 40px;
+}
+
+header div.contacts nav ul{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+}
+
+header div.contacts nav ul li{
+    display: inline-block;
+    height: 30px;
+    color: #fff;
+    transition: all .127s ease;
+}
+
+header div.contacts nav ul li:hover{
+    font-weight: bolder;
+    color: #fcff46;
+}
+
+header div.contacts nav ul li a{
+    display: inline-block;
+    margin-left: 5px;
+    transform: translateY(-7px);
+    color: inherit;
+}
+
+main{
+    margin-top: 80px;
+}
+
+main .menu-lateral{
+    display: block;
+    width: 17%;
+    height: calc(100vh - 80px);
+    position: fixed;
+    background: #6a346a;
+    padding: 15px 0;
+}
+
+main .menu-lateral a{
+    display: block;
+    padding: 15px;
+    font-size: 20px;
+    color: #fff;
+}
+
+main .menu-lateral a:hover{
+    background: #e000e0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main .main-container{
+    width: 83%;
+    padding: 10px;
+    margin-left: 17%;
+}
+
+main .main-container .historico-agendamento{
+    width: 85%;
+    margin: 20px auto;
+    padding: 0 0 0 15px;
+}
+
+main .main-container .historico-agendamento table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+main .main-container .historico-agendamento table thead th{
+    padding: 5px;
+    border: none;
+    background-color: #610d75;
+    color: #fff;
+}
+
+main .main-container .historico-agendamento table tbody tr{
+    border: none;
+}
+
+main .main-container .historico-agendamento table tbody td{
+    padding: 5px;
+}
+
+main .main-container .historico-agendamento table tbody td .material-icons.concluido{
+    color: #1fc829;
+}
+
+main .main-container .historico-agendamento table tbody td .material-icons.andamento{
+    color: #eeee2f;
+}
+
+main .main-container .historico-agendamento table tbody td .material-icons.cancelado{
+    color: #ff0000;
+}
+
+main .main-container .historico-agendamento table tbody tr:nth-child(even){
+    background-color: #ccc;
+}
+
+/* ============================================== 
+TESTE DE COMO FICARÁ O CAMPO DE PESQUISAR NA TELA
+=============================================== */
+main .main-container .search{
+    display: inline-block;
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    margin-bottom: 10px;
+}
+
+main .main-container .search input{
+    width: 430px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    transform: translate(5px, -6px);
+    font-size: 18px;
+    outline: none;
+}
+
+main .main-container .search span{
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    transform: translate(15px, 8px);
+    transition: all .222s linear;
+}
+
+main .main-container .search .btn_pesquisar{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+main .main-container .search .btn_pesquisar i{
+    padding: 5px;
+    font-size: 24px;
+    background-color: transparent;
+    transition: all .222s linear;
+}
+
+main .main-container .search span:hover{
+    background-color: #000;
+}
+main .main-container .search i:hover{
+    color: #fff;
+}
+
+/* =========================================
+FIM DA ÁREA DE TESTE COM O CAMPO DE PESQUISA
+===========================================*/
+
+@media all and (min-width: 480px) and (max-width: 720px){
+    main .menu-lateral{
+        display: none;
+    }
+    main .main-container{
+        width: 100%;
+        padding: 10px;
+        margin: unset;
+    }
+
+    main .main-container .historico-agendamento{
+        width: 100%;
+        margin: 10px 0;
+        padding: unset;
+    }
+    
+    main .main-container .historico-agendamento table{
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+    }
+}

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+div.table{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+div.table table thead tr{
+    text-align: left;
+    color: #fff;
+    background-color: #73265f;
+}
+
+div.table table thead tr th, div.table table tbody tr td{
+    padding: 5px;
+}
+
+div.table table thead tr th:nth-child(1){
+    min-width: 300px;
+    max-width: 600px;
+}
+
+div.table table thead tr th:nth-child(2){
+    min-width: 100px;
+    max-width: 200px;
+}
+
+div.table table thead tr th:nth-child(3), div.table table thead tr th:nth-child(4){
+    min-width: 80px;
+    max-width: 115px;
+}
+
+div.table table thead tr th:nth-child(5){
+    min-width: 170px;
+    max-width: 325px;
+}
+
+div.table table tbody tr{
+    border: none;
+    border-bottom: 1px solid #0000006e;
+}
+
+div.table table tbody tr:nth-child(odd){
+    background-color: #da2fafaf;
+}
+
+div.table table tbody tr:nth-child(even){
+    background-color: #f8aee6c7;
+}
+
+
+div.table table tbody tr td form div.material{
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #a000b7;
+    border-radius: 5px;
+    padding: 2px;
+    /* margin: 5px 0 5px 5px; */
+    cursor: pointer;
+}
+
+div.table table tbody tr td form div.material + div.material{
+    padding-left: 0;
+    /* margin: 5px 5px 5px 0; */
+    background-color: #a000b7;
+    color: #fff;
+}
+
+div.table table tbody tr td form div.material span.material-icons{
+    color: #a000b7;
+    transform: translateY(2px);
+    font-size: 22px;
+}
+
+div.table table tbody tr td form div.material span.material-icons.carregar{
+    color: #fff;
+    transform: translateY(2px);
+    font-size: 22px;
+}
+
+div.table table tbody tr td form div.material button{
+    border: none;
+    transform: translate(-5px, -4px);
+    color: #a000b7;
+    background-color: transparent;
+    cursor: pointer;
+}
+div.table table tbody tr td form div.material button[value="carregar"]{
+    color: #fff;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+    .out-container{
+        overflow-x: auto;
+    }
+
+    div.table{
+        margin: 0;
+    }
+}
