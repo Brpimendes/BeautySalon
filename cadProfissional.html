@@ -58,25 +58,25 @@
             <div class="main-container">
                 <div class="cadastro-form">
                     <form class="form" action="post">
-                        <input type="hidden" name="id" value="<?php echo $profissional->profissional_id ?>">
+                        <input type="hidden" name="id" >
 
                         <label for="nome">Nome</label>
-                        <input type="text" name="nome" value="<?php echo $profissional->nome ?>" /> <br>
+                        <input type="text" name="nome" />
 
                         <label for="data_nasc">Data Nascimento</label>
-                        <input type="date" name="data_nasc" value="<?php echo $profissional->data_nasc ?>" /> <br>
+                        <input type="date" name="data_nasc" />
 
                         <label for="cpf">CPF</label>
-                        <input type="text" name="cpf" value="<?php echo $profissional->cpf ?>" /> <br>
+                        <input type="text" name="cpf" />
 
                         <label for="telefone">Telefone</label>
-                        <input type="text" name="telefone" value="<?php echo $profissional->telefone ?>" /> <br>
+                        <input type="text" name="telefone" />
 
                         <label for="email">Email</label>
-                        <input type="email" name="email" value="<?php echo $profissional->email ?>" /> <br>
+                        <input type="email" name="email" />
 
                         <label for="senha">Senha</label>
-                        <input type="password" name="senha"> <br>
+                        <input type="password" name="senha">
 
                         <button name="acao" value="cadastrar">Cadastrar</button>
                         <button name="acao" value="listar">Listar</button>
@@ -105,12 +105,11 @@
                                 <td>creuzinha@mail.com</td>
                                 <td>
                                     <form method='post'>
-                                        <input type='hidden' name='id' value='{$serv->servicos_id}' />
-                                        <div class='material' id='excluir'>
+                                        <div class='material excluir'>
                                             <span class='material-icons'>delete_forever</span>
                                             <button name='acao' value='excluir'>Excluir</button>
                                         </div>
-                                        <div class='material'>
+                                        <div class='material carregar'>
                                             <span class='material-icons carregar'>upgrade</span>
                                             <button name='acao' value='carregar'>Carregar</button>
                                         </div>

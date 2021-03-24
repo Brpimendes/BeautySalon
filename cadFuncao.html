@@ -27,10 +27,10 @@
 
                 <form action="" method="post">
                     <div class="login-form-det">
-                        <input type="hidden" name="id" value="<?php echo $funcao->funcao_id ?>" />
+                        <input type="hidden" name="id" />
 
                         <label for="nome">Nome da Função</label>
-                        <input type="text" name="nome" value="<?php echo $funcao->nome_funcao ?>" />
+                        <input type="text" name="nome" />
                     </div>
                     
                     <div class="cad_btn">
@@ -42,31 +42,21 @@
             </div>
 
             <div class="table-cad">
-                <?php
-                    if($funcoes){
-                        echo "<table>
-                            <tr>
-                                <th>Nome</th>
-                                <th>Ação</th>
-                            </tr>
-                        ";
-                            foreach($funcoes as $fun){
-                                echo "
-                                    <tr>
-                                        <td>{$fun['nome_funcao']}</td>
-                                        <td>
-                                            <form method='post'>
-                                                <input type='hidden' name='id' value='{$fun['funcao_id']}' />
-                                                <button name='acao' value='excluir'>Excluir</button>
-                                                <button name='acao' value='carregar'>Carregar</button>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                ";
-                            }
-                        echo "</table";
-                    }
-                ?>
+                <table>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Ação</th>
+                    </tr>
+                    <tr>
+                        <td>Cabeleireira</td>
+                        <td>
+                            <form method='post'>
+                                <button name='acao' value='excluir'>Excluir</button>
+                                <button name='acao' value='carregar'>Carregar</button>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </main>
     </div>

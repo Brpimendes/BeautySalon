@@ -14,6 +14,10 @@ div.table{
     margin-top: 10px;
 }
 
+div.table table{
+    width: 100%;
+}
+
 div.table table thead tr{
     text-align: left;
     color: #fff;
@@ -57,20 +61,26 @@ div.table table tbody tr:nth-child(even){
     background-color: #f8aee6c7;
 }
 
+div.table table tbody tr td form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+}
 
 div.table table tbody tr td form div.material{
     display: inline-block;
-    background-color: #fff;
     border: 1px solid #a000b7;
     border-radius: 5px;
     padding: 2px;
-    /* margin: 5px 0 5px 5px; */
+    text-align: center;
     cursor: pointer;
 }
 
-div.table table tbody tr td form div.material + div.material{
-    padding-left: 0;
-    /* margin: 5px 5px 5px 0; */
+div.table table tbody tr td form div.material.excluir{
+    background-color: #fff;
+}
+
+div.table table tbody tr td form div.material.carregar{
     background-color: #a000b7;
     color: #fff;
 }
@@ -81,6 +91,7 @@ div.table table tbody tr td form div.material span.material-icons{
     font-size: 22px;
 }
 
+
 div.table table tbody tr td form div.material span.material-icons.carregar{
     color: #fff;
     transform: translateY(2px);
@@ -90,8 +101,8 @@ div.table table tbody tr td form div.material span.material-icons.carregar{
 div.table table tbody tr td form div.material button{
     border: none;
     transform: translate(-5px, -4px);
-    color: #a000b7;
     background-color: transparent;
+    color: #a000b7;
     cursor: pointer;
 }
 div.table table tbody tr td form div.material button[value="carregar"]{
