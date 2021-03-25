@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Cliente</title>
     <link rel="stylesheet" href="css/principal.css">
-    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/cadCliente.css">
     <link rel="stylesheet" href="css/table.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -42,58 +42,70 @@
             <div class="menu-lateral">
                 <nav>
                     <ul>
-                        <li><a href="/cadastro.html"> Meu Perfil</a></li> 
-                        <li><a href="/agendamento.html"> Meus Agendamentos</a></li>
+                        <li><a href="cadastro.html"> Meu Perfil</a></li>
+                        <li><a href="agendamento.html"> Meus Agendamentos</a></li>
                         <li><a href="cadCliente.html">Cadastro de Cliente</a></li>
+                        <li><a href="cadFormaPagamento.html">Cadastro das Formas de Pagamento</a></li>
                         <li><a href="cadFuncao.html">Cadastrar Função</a></li>
                         <li><a href="cadProfissional.html">Cadastrar Profissional</a></li>
+                        <li><a href="cadProfissionalFuncao.html">Relação Profissional-Função</a></li>
                         <li><a href="cadServico.html">Cadastrar Serviço</a></li>
                         <li><a href="/">Relatórios</a></li>
-                        <li><a href="cadProfissionalFuncao.php">Relação Profissional Função</a></li>
-                        <li><a href="cadFormaPagamento">Caixa</a></li>
                     </ul>
                 </nav>
             </div>
 
             <div class="main-container">
                 <div class="cadastro-form">
-                    <h1>CADASTRO</h1>
+                    <h1>Cadastro de Clientes</h1>
         
                     <form class="form" method="post">
-                        <div class="login-form-det">
-                            <div>
-                                <input type="hidden" name="id" value="">
-            
-                                <label for="nome">Nome</label>
+                        <div class="column-left">
+                            <input type="hidden" name="id" value="">
+        
+                            <label for="nome">
+                                <span>Nome</span>
                                 <input type="text" name="nome" value="">
-            
-                                <label for="cpf">CPF</label>
+                            </label>
+        
+                            <label for="cpf">
+                                <span>CPF</span>
                                 <input type="text" name="cpf" value="">
-            
-                                <label for="data_nasc">Data Nascimento</label>
+                            </label>
+        
+                            <label for="data_nasc">
+                                <span>Data Nascimento</span>
                                 <input type="date" name="data_nasc" value="">
-        
-                                <label for="telefone">Telefone</label>
+                            </label>
+    
+                            <label for="telefone">
+                                <span>Telefone</span>
                                 <input type="text" name="telefone" value="">
-                            </div>
-                            <div>
-                                <Label>
-                                    <span>Sexo:</span>
-                                    <select name="" id="sexo">
-                                        <option value="F" >Feminino</option>
-                                        <option value="M" selected>Masculino</option>
-                                    </select>
-                                </Label>
-        
-                                <label for="email">Email</label>
-                                <input type="email" name="email" value="">
-            
-                                <label for="senha">Senha</label>
-                                <input type="password" name="senha">
-                            </div>
-                            
-                            <button name="acao" value="cadastrar">Cadastrar</button>
+                            </label>
                         </div>
+
+                        <div class="column-right">
+                            <Label>
+                                <span>Sexo:</span>
+                                <select name="" id="sexo">
+                                    <option value="F" >Feminino</option>
+                                    <option value="M" selected>Masculino</option>
+                                </select>
+                            </Label>
+    
+                            <label for="email">
+                                <span>Email</span>
+                                <input type="email" name="email" value="">
+                            </label>
+        
+                            <label for="senha">
+                                <span>Senha</span>
+                                <input type="password" name="senha">
+                            </label>
+                        </div>
+                        
+                        <button class="form-btn" name="acao" value="cadastrar">Cadastrar</button>
+                        <button class="form-btn" name="acao" value="editar">Editar</button>
                     </form>
                 </div>
         

@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cadastro-form h1{
+    text-transform: capitalize;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.cadastro-form .form{
+    display: grid;
+    grid-template-areas: "col-l col-r"
+                         "btn-adc btn-edt";
+    gap: 10px;
+}
+
+.cadastro-form .form label{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.cadastro-form .form label input{
+    display: inline-block;
+    width: 90%;
+    margin-left: 10px;
+}
+
+.cadastro-form .form label input:nth-child(3){
+    display: inline-block;
+    width: 88%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.cadastro-form .form label select{
+    display: inline-block;
+    width: 90%;
+    margin-left: 10px;
+    border: none;
+    background-color: #eee;
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.cadastro-form .form .column-left{
+    grid-area: col-l;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 6px #804473;
+    border: 1px solid #ccc;
+}
+
+.cadastro-form .form .column-right{
+    grid-area: col-r;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 6px #804473;
+    border: 1px solid #ccc;
+}
+
+.cadastro-form .form .form-btn{
+    padding: 10px 40px;
+    border: none;
+    background-color: darkmagenta;
+    color: #fff;
+}
