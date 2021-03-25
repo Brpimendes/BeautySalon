@@ -4,66 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Forma de Pagamento</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/principal.css">
     <link rel="stylesheet" href="css/table.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div class="out-container">
-        <header class="header-login">
-            <div class="header-login-menu">
-                <div class="logo">
-                    <a href="/"><img src="img/logo.png" alt="logo salão Beauty"></a>
-                </div>
-
-                <div class="welcome">
-                    <h1>Bem vindo!</h1>
-
-                    <p>Cadastre as suas formas de pagamento para que tenha mais opções no recebimento.</p>
+        <header>
+            <div class="menu-fixed">
+                <div class="contacts">
+                    <div class="logo">
+                        <img src="img/logo.png" alt="logo salão Beauty">
+                    </div>
+    
+                    <div class="direct-contacts">
+                        <span class="material-icons">local_phone</span> <p> (21)2404-0695 </p>
+                        <span class="material-icons">mail</span> <p> E-mail: beauty_salao@gmail.com </p>
+                    </div>
+    
+                    <div class="hamburguer">
+                        <span class="material-icons">menu</span>
+                    </div>
+    
+                    <nav>
+                        <ul>
+                            <li><span class="material-icons">logout</span><a href="index.html">Sair</a></li>
+                            <li><span class="material-icons">person_pin</span><a href="principal.html">Página Principal</a></li>
+                            <li><span class="material-icons">attach_money</span><a href="tabelaPreco.html">Tabela de Preços</a></li>
+                            <li><span class="material-icons">shopping_cart</span><a href="#contact">Carrinho</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </header>
 
-        <h1>Cadastro de Formas de Pagamentos</h1>
+        <main> 
+            <div class="menu-lateral">
+                <nav>
+                    <ul>
+                        <li><a href="cadastro.html"> Meu Perfil</a></li>
+                        <li><a href="agendamento.html"> Meus Agendamentos</a></li>
+                        <li><a href="cadCliente.html">Cadastro de Cliente</a></li>
+                        <li><a href="cadFormaPagamento.html">Cadastro das Formas de Pagamento</a></li>
+                        <li><a href="cadFuncao.html">Cadastrar Função</a></li>
+                        <li><a href="cadProfissional.html">Cadastrar Profissional</a></li>
+                        <li><a href="cadProfissionalFuncao.html">Relação Profissional-Função</a></li>
+                        <li><a href="cadServico.html">Cadastrar Serviço</a></li>
+                        <li><a href="/">Relatórios</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-        <form method="post">
-            <input type="hidden" name="id" value="" />
+            <div class="main-container">
 
-            <label for="forma_pagamento">Forma de Pagamento</label>
-            <input type="text" name="forma_pagamento" value="" />
+                <form method="post">
+                    <input type="hidden" name="id" value="" />
 
-            <button name="acao" value="cadastrar">Cadastrar</button>
-            <button name="acao" value="alterar">Alterar</button>
-        </form>
+                    <label for="forma_pagamento">Forma de Pagamento</label>
+                    <input type="text" name="forma_pagamento" value="" />
 
-        <div class="table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Forma de Pagamento</th>
-                        <th>Ação</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>CREDITO</td>
-                        <td>
-                            <form method='post'>
-                                <input type='hidden' name='id' value= />
-                                <div class='material excluir'>
-                                    <span class='material-icons'>delete_forever</span>
-                                    <button name='acao' value='excluir'>Excluir</button>
-                                </div>
-                                <div class='material carregar'>
-                                    <span class='material-icons carregar'>upgrade</span>
-                                    <button name='acao' value='carregar'>Carregar</button>
-                                </div>
-                            </form>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                    <button name="acao" value="cadastrar">Cadastrar</button>
+                    <button name="acao" value="alterar">Alterar</button>
+                </form>
+
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Forma de Pagamento</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CREDITO</td>
+                                <td>
+                                    <form method='post'>
+                                        <input type='hidden' name='id' value= />
+                                        <div class='material excluir'>
+                                            <span class='material-icons'>delete_forever</span>
+                                            <button name='acao' value='excluir'>Excluir</button>
+                                        </div>
+                                        <div class='material carregar'>
+                                            <span class='material-icons carregar'>upgrade</span>
+                                            <button name='acao' value='carregar'>Carregar</button>
+                                        </div>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
     </div>
 </body>
 </html>
