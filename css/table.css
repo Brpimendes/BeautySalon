@@ -11,7 +11,7 @@ body{
 div.table{
     display: block;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 100px;
 }
 
 div.table table{
@@ -21,7 +21,7 @@ div.table table{
 div.table table thead tr{
     text-align: left;
     color: #fff;
-    background-color: #73265f;
+    background-color: #610d75;
 }
 
 div.table table thead tr th, div.table table tbody tr td{
@@ -53,12 +53,12 @@ div.table table tbody tr{
     border-bottom: 1px solid #0000006e;
 }
 
-div.table table tbody tr:nth-child(odd){
+/* div.table table tbody tr:nth-child(odd){
     background-color: #da2fafaf;
-}
+} */
 
 div.table table tbody tr:nth-child(even){
-    background-color: #f8aee6c7;
+    background-color: #ccc;
 }
 
 div.table table tbody tr td form{
