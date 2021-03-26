@@ -13,7 +13,7 @@
 .cadastro-form .form{
     display: grid;
     grid-template-areas: "col-l col-r"
-                         "btn-adc btn-edt";
+                         "btn none";
     gap: 10px;
 }
 
@@ -30,7 +30,7 @@
     margin-left: 10px;
 }
 
-.cadastro-form .form label input:nth-child(3){
+.cadastro-form .form label:nth-child(4) input{
     display: inline-block;
     width: 88%;
     text-align: center;
@@ -72,9 +72,27 @@
     border: 1px solid #ccc;
 }
 
-.cadastro-form .form .form-btn{
+.cadastro-form .form .buttons{
+    grid-area: btn;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 10px;
+}
+
+.cadastro-form .form .buttons .form-btn{
+    display: inline-block;
     padding: 10px 40px;
+    width: 100%;
     border: none;
-    background-color: darkmagenta;
+    border-radius: 10px;
+    background-color: #d281e6;
     color: #fff;
+    cursor: pointer;
+    transition: all .222s linear;
+}
+
+.cadastro-form .form .buttons .form-btn:hover{
+    background-color: #5d2e69;
+    font-weight: bold;
 }

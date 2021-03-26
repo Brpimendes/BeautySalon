@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/cadCliente.css">
     <link rel="stylesheet" href="css/table.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/cadCliente.js"></script>
 </head>
 <body>
     <div class="out-container">
@@ -60,9 +61,7 @@
                     <h1>Cadastro de Clientes</h1>
         
                     <form class="form" method="post">
-                        <div class="column-left">
-                            <input type="hidden" name="id" value="">
-        
+                        <div class="column-left">        
                             <label for="nome">
                                 <span>Nome</span>
                                 <input type="text" name="nome" value="">
@@ -103,9 +102,11 @@
                                 <input type="password" name="senha">
                             </label>
                         </div>
-                        
-                        <button class="form-btn" name="acao" value="cadastrar">Cadastrar</button>
-                        <button class="form-btn" name="acao" value="editar">Editar</button>
+
+                        <div class="buttons">
+                            <button class="form-btn" id="cadastrar" name="acao" value="cadastrar">Cadastrar</button>
+                            <button class="form-btn" id="editar" name="acao" value="editar">Editar</button>
+                        </div>
                     </form>
                 </div>
         
