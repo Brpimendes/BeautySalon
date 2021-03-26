@@ -241,6 +241,29 @@ main .main-container .search i:hover{
 FIM DA ÁREA DE TESTE COM O CAMPO DE PESQUISA
 ===========================================*/
 
+@media all and (min-width: 320px) and (max-width: 480px){
+    main .menu-lateral{
+        display: none;
+    }
+    main .main-container{
+        width: 100%;
+        padding: 10px;
+        margin: unset;
+    }
+
+    main .main-container .historico-agendamento{
+        width: 100%;
+        margin: 10px 0;
+        padding: unset;
+    }
+    
+    main .main-container .historico-agendamento table{
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+    }
+}
+
 @media all and (min-width: 480px) and (max-width: 720px){
     main .menu-lateral{
         display: none;
