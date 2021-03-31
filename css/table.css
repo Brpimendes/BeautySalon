@@ -53,9 +53,9 @@ div.table table tbody tr{
     border-bottom: 1px solid #0000006e;
 }
 
-/* div.table table tbody tr:nth-child(odd){
-    background-color: #da2fafaf;
-} */
+div.table table tbody tr:nth-child(odd){
+    background-color: #fff;
+}
 
 div.table table tbody tr:nth-child(even){
     background-color: #ccc;

@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: url('../img/background_salao.jpg');
+}
+
 li{
     display: inline;
     list-style-type: none;
@@ -139,9 +143,9 @@ main .main-container{
 }
 
 main .main-container .historico-agendamento{
-    width: 85%;
+    width: 100%;
     margin: 20px auto;
-    padding: 0 0 0 15px;
+    /* padding: 0 0 0 15px; */
 }
 
 main .main-container .historico-agendamento table{
@@ -179,6 +183,9 @@ main .main-container .historico-agendamento table tbody td .material-icons.cance
 
 main .main-container .historico-agendamento table tbody tr:nth-child(even){
     background-color: #ccc;
+}
+main .main-container .historico-agendamento table tbody tr:nth-child(odd){
+    background-color: #fff;
 }
 
 /* ============================================== 

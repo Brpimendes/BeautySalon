@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Profissionais</title>
     <link rel="stylesheet" href="css/principal.css">
-    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/cadProfissional.css">
     <link rel="stylesheet" href="css/table.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -57,6 +57,7 @@
 
             <div class="main-container">
                 <div class="cadastro-form">
+                    <h1>Cadastro de Profissional</h1>
                     <form class="form" action="post">
                         <input type="hidden" name="id" >
 
@@ -78,9 +79,11 @@
                         <label for="senha">Senha</label>
                         <input type="password" name="senha">
 
-                        <button name="acao" value="cadastrar">Cadastrar</button>
-                        <button name="acao" value="listar">Listar</button>
-                        <button name="acao" value="alterar">Alterar</button>
+                        <div class="buttons">
+                            <button name="acao" value="cadastrar">Cadastrar</button>
+                            <button name="acao" value="listar">Listar</button>
+                            <button name="acao" value="alterar">Alterar</button>
+                        </div>
                     </form>
                 </div>
 
@@ -97,6 +100,25 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <tr>
+                                <td>Creuza Barneta</td>
+                                <td>15/06/1925</td>
+                                <td>12312312312</td>
+                                <td>964522585</td>
+                                <td>creuzinha@mail.com</td>
+                                <td>
+                                    <form method='post'>
+                                        <div class='material excluir'>
+                                            <span class='material-icons'>delete_forever</span>
+                                            <button name='acao' value='excluir'>Excluir</button>
+                                        </div>
+                                        <div class='material carregar'>
+                                            <span class='material-icons carregar'>upgrade</span>
+                                            <button name='acao' value='carregar'>Carregar</button>
+                                        </div>
+                                    </form>
+                                </td>
+                            </tr>
                             <tr>
                                 <td>Creuza Barneta</td>
                                 <td>15/06/1925</td>

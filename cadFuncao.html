@@ -1,62 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Função</title>
-    <link rel="stylesheet" href="css/main.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro de função</title>
+        <link rel="stylesheet" href="css/principal.css">
+        <link rel="stylesheet" href="css/cadFuncao.css">
+        <link rel="stylesheet" href="css/table.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="js/cadCliente.js"></script>
 </head>
 <body>
     <div class="out-container">
-        <header class="header-login">
-            <div class="header-login-menu">
-                <div class="logo">
-                    <a href="/"><img src="img/logo salao.png" alt="logo salão Beauty"></a>
-                </div>
-                
-                <div class="welcome">
-                    <h1>Bem Vindo</h1>
-                    <p>Cadastre a função que o seu profissional irá desempenhar.</p>
+        <header>
+            <div class="menu-fixed">
+                <div class="contacts">
+                    <div class="logo">
+                        <img src="img/logo.png" alt="logo salão Beauty">
+                    </div>
+    
+                    <div class="direct-contacts">
+                        <span class="material-icons">local_phone</span> <p> (21)2404-0695 </p>
+                        <span class="material-icons">mail</span> <p> E-mail: beauty_salao@gmail.com </p>
+                    </div>
+    
+                    <div class="hamburguer">
+                        <span class="material-icons">menu</span>
+                    </div>
+    
+                    <nav>
+                        <ul>
+                            <li><span class="material-icons">logout</span><a href="index.html">Sair</a></li>
+                            <li><span class="material-icons">person_pin</span><a href="principal.html">Página Principal</a></li>
+                            <li><span class="material-icons">attach_money</span><a href="tabelaPreco.html">Tabela de Preços</a></li>
+                            <li><span class="material-icons">shopping_cart</span><a href="#contact">Carrinho</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </header>
 
-        <main>
-            <div class="login-form">
-                <h1>Cadastro da Função</h1>
-
-                <form action="" method="post">
-                    <div class="login-form-det">
-                        <input type="hidden" name="id" />
-
-                        <label for="nome">Nome da Função</label>
-                        <input type="text" name="nome" />
-                    </div>
-                    
-                    <div class="cad_btn">
-                        <button name="acao" value="cadastrar">Cadastrar</button>
-                        <button name="acao" value="listar">Listar</button>
-                        <button name="acao" value="alterar">Atualizar</button>
-                    </div>
-                </form>
+        <main> 
+            <div class="menu-lateral">
+                <nav>
+                    <ul>
+                        <li><a href="cadastro.html"> Meu Perfil</a></li>
+                        <li><a href="agendamento.html"> Meus Agendamentos</a></li>
+                        <li><a href="cadCliente.html">Cadastro de Cliente</a></li>
+                        <li><a href="cadFormaPagamento.html">Cadastro das Formas de Pagamento</a></li>
+                        <li><a href="cadFuncao.html">Cadastrar Função</a></li>
+                        <li><a href="cadProfissional.html">Cadastrar Profissional</a></li>
+                        <li><a href="cadProfissionalFuncao.html">Relação Profissional-Função</a></li>
+                        <li><a href="cadServico.html">Cadastrar Serviço</a></li>
+                        <li><a href="/">Relatórios</a></li>
+                    </ul>
+                </nav>
             </div>
-
-            <div class="table-cad">
-                <table>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Ação</th>
-                    </tr>
-                    <tr>
-                        <td>Cabeleireira</td>
-                        <td>
-                            <form method='post'>
-                                <button name='acao' value='excluir'>Excluir</button>
-                                <button name='acao' value='carregar'>Carregar</button>
-                            </form>
-                        </td>
-                    </tr>
-                </table>
+    
+            <div class="main-container">
+                <div class="cadastro-form">
+                    <h1>Cadastro de Função</h1>
+                    <form class="form" action="post">    
+                        <label for="função">Nome</label>
+                        <input type="text" name="nome" />
+                        
+                        <div class="buttons">
+                            <button name="acao" value="cadastrar">Cadastrar</button>
+                            <button name="acao" value="listar">Listar</button>
+                            <button name="acao" value="alterar">Alterar</button>
+                        </div>
+                    </form>
+                </div>
+    
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Função</th>                                                            
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Joana Pereira</td>
+                                <td>Cabeleireiro</td>
+                                <td>
+                                    <form method='post'>
+                                        <div class='material excluir'>
+                                            <span class='material-icons'>delete_forever</span>
+                                            <button name='acao' value='excluir'>Excluir</button>
+                                        </div>
+                                        <div class='material carregar'>
+                                            <span class='material-icons carregar'>upgrade</span>
+                                            <button name='acao' value='carregar'>Carregar</button>
+                                        </div>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </main>
     </div>

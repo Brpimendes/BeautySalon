@@ -4,75 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciamento de Profissional com Função</title>
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/cadProfissionalFuncao.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <?php
-        ini_set('display_errors', true);
-        require_once('Controller/controllerProfissional_funcao.php');
-    ?>
+    <div class="out-container">
+        <header>
+            <div class="menu-fixed">
+                <div class="contacts">
+                    <div class="logo">
+                        <img src="img/logo.png" alt="logo salão Beauty">
+                    </div>
+    
+                    <div class="direct-contacts">
+                        <span class="material-icons">local_phone</span> <p> (21)2404-0695 </p>
+                        <span class="material-icons">mail</span> <p> E-mail: beauty_salao@gmail.com </p>
+                    </div>
+    
+                    <div class="hamburguer">
+                        <span class="material-icons">menu</span>
+                    </div>
+    
+                    <nav>
+                        <ul>
+                            <li><span class="material-icons">logout</span><a href="index.html">Sair</a></li>
+                            <li><span class="material-icons">person_pin</span><a href="principal.html">Página Principal</a></li>
+                            <li><span class="material-icons">attach_money</span><a href="tabelaPreco.html">Tabela de Preços</a></li>
+                            <li><span class="material-icons">shopping_cart</span><a href="#contact">Carrinho</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main> 
+            <div class="menu-lateral">
+                <nav>
+                    <ul>
+                        <li><a href="cadastro.html"> Meu Perfil</a></li>
+                        <li><a href="agendamento.html"> Meus Agendamentos</a></li>
+                        <li><a href="cadCliente.html">Cadastro de Cliente</a></li>
+                        <li><a href="cadFormaPagamento.html">Cadastro das Formas de Pagamento</a></li>
+                        <li><a href="cadFuncao.html">Cadastrar Função</a></li>
+                        <li><a href="cadProfissional.html">Cadastrar Profissional</a></li>
+                        <li><a href="cadProfissionalFuncao.html">Relação Profissional-Função</a></li>
+                        <li><a href="cadServico.html">Cadastrar Serviço</a></li>
+                        <li><a href="/">Relatórios</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-    <form method="post">
-        <label for="profissional">Profissional</label>
-        <select name="profissional_id">
-            <?php  
-                foreach( $profissionais as $prof ){
-                    if( $prof_fun ){
-                        if( $prof_func->profissional_id == $prof['profissional_id'] ){
-                            echo "<option value='{$prof['profissional_id']}' selected=true >{$prof['nome']}</option>";
-                        } else {
-                            echo "<option value='{$prof['profissional_id']}' >{$prof['nome']}</option>";
-                        }
-                    }
-                }
-            ?>
-        </select>
+            <div class="main-container">
+                <div class="cadastro-form">
+                    <h1>Cadastro de Profissional</h1>
+                    <form class="form" method="post">
+                        <label for="profissional">
+                            <span>Profissional</span>
+                            <select name="profissional_id">
+                                <option selected=true >Carla Souza</option>
+                                <option>Sueli Borba</option>
+                            </select>
+                        </label>
 
-        <label for="funcao">Função</label>
-        <select name="funcao_id">
-            <?php
-                foreach( $funcoes as $fun ){
-                    if( $prof_fun ){
-                        if( $prof_func->funcao_id == $fun['funcao_id'] ){
-                            echo "<option value='{$fun['funcao_id']}' selected=true >{$fun['nome_funcao']}</option>";
-                        } else {
-                            echo "<option value='{$fun['funcao_id']}' >{$fun['nome_funcao']}</option>";
-                        }
-                    }
-                }
-            ?>
-        </select>
+                        <label for="funcao">
+                            <span>Função</span>
+                            <select name="funcao_id">
+                                <option selected=true >Cabeleireira</option>
+                                <option>Manicure</option>
+                            </select>
+                        </label>
 
-        <button name="acao" value="cadastrar">Cadastrar</button>
-        <button name="acao" value="alterar">Alterar</button>
-    </form>
-
-    <?php
-        if( $prof_funcs ){
-            echo "<table>
-                <thead>
-                    <tr>
-                        <th>Profissional</th>
-                        <th>Função</th>
-                        <th>Ação</th>
-                    </tr>
-                </thead>
-            ";
-            echo "<tbody>";
-                foreach($prof_funcs as $pro){
-                    $profunc = new Profissional_funcao($pro['profissional_id']);
-                    $profFuncao = new Profissional_funcao($pro['funcao_id']);
-                    echo "<tr>
-                            <td>{$profunc->profissional_id->nome}</td>
-                            <td>{$profFuncao->funcao_id->nome_funcao}</td>
-                            <td>
-                                <form method='POST'>
-                                </form>
-                            </td>
-                        </tr>";
-                }
-            echo "</tbody>";
-            echo "</table>";
-        }
-    ?>
+                        <div class="buttons">
+                            <button name="acao" value="cadastrar">Cadastrar</button>
+                            <button name="acao" value="alterar">Alterar</button>
+                        </div>
+                    </form>
+                </div>
+    
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Profissional</th>
+                                <th>Função</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Carla Souza</td>
+                                <td>Cabeleireira</td>
+                                <td>
+                                    <form method='POST'>
+                                        <div class='material excluir'>
+                                            <span class='material-icons'>delete_forever</span>
+                                            <button name='acao' value='excluir'>Excluir</button>
+                                        </div>
+                                        <div class='material carregar'>
+                                            <span class='material-icons carregar'>upgrade</span>
+                                            <button name='acao' value='carregar'>Carregar</button>
+                                        </div>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sueli Borba</td>
+                                <td>Manicure</td>
+                                <td>
+                                    <form method='POST'>
+                                        <div class='material excluir'>
+                                            <span class='material-icons'>delete_forever</span>
+                                            <button name='acao' value='excluir'>Excluir</button>
+                                        </div>
+                                        <div class='material carregar'>
+                                            <span class='material-icons carregar'>upgrade</span>
+                                            <button name='acao' value='carregar'>Carregar</button>
+                                        </div>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
