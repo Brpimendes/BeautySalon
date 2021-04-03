@@ -7,49 +7,24 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.container-cadastro{
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(to right, blueviolet, bisque);
-}
-
-.container-conteudo{
-    display: inline-flex;
-    height: 650px;
-}
-
-.cadastro-img{
-    display: inline-grid;
-    place-content: center;
-    width: 500px;
-    height: inherit;
-}
-
-.cadastro-img img{
-    display: block;
-    width: inherit;
-    height: inherit;
-    object-fit: cover;
-}
-
 .cadastro-form{
     display: flex;
-    width: 500px;
-    height: 100%;
     flex-direction: column;
-    align-items: center;
+    width: 50%;
+    height: 100%;
     margin: 0 auto;
+    padding: 10px;
+    align-items: center;
     background-color: #fff;
+    border-radius: 20px;
 }
 
-.cadastro-form span{
-    color: white;
+/* .cadastro-form span{
+    color: #000;
     font-size: 30px;
     font-weight: bold;
     margin: 20px 0;
-}
+} */
 
 
 .cadastro-form .form{
@@ -59,39 +34,9 @@
     place-items: center;
 }
 
-.cadastro-form input{
-    width: 80%;
-    padding: 12px 15px;
-    border: 1px solid white;
-    border-radius: 20px;
-    background-color: #ccc;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: white;
-    outline: none;
-    
-    }
-    ::-webkit-input-placeholder {
-        color: white;
-    }
-     
-    :-moz-placeholder { /* Firefox 18- */
-        color: white;
-    }
-     
-    ::-moz-placeholder {  /* Firefox 19+ */
-        color:white; 
-        
-    }
-     
-    :-ms-input-placeholder {  
-        color:white; 
-        
-    }
-
 .cadastro-form .form label{
     display: inline-block;
-    width: 80%;
+    width: 100%;
     margin: 5px 0;
 }
 
@@ -99,28 +44,61 @@
     display: inline-block;
     width: 18%;
     margin: unset;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: normal;
 }
 
+.cadastro-form .form label input{
+    width: 80%;
+    margin: 5px 0;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 18px;
+    outline: none;
+    
+    }
+    ::-webkit-input-placeholder {
+        color: #555;
+    }
+     
+    :-moz-placeholder { /* Firefox 18- */
+        color: #555;
+    }
+     
+    ::-moz-placeholder {  /* Firefox 19+ */
+        color: #555; 
+        
+    }
+     
+    :-ms-input-placeholder {  
+        color: #555; 
+    }
+
 .cadastro-form .buttons{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    gap: 20px
+    gap: 10px
 }
 
 .cadastro-form .buttons button{
+    display: grid;
     width: 100%;
-    margin-top: 20px;
-    padding: 12px 5px;
-    border-radius: 20px;
+    margin: 10px 0 0 0;
+    padding: 10px;
     border: none;
-    background-color: #610d75;
+    border-radius: 5px;
+    background-color: #d281e6;
     color: #fff;
-    font-weight: bold;
-    box-shadow: 3px 3px 7px black;
+    font-size: 20px;
+    transition: all .224s ease;
     cursor: pointer;
+}
+
+.cadastro-form .buttons button:hover{
+    background-color: #5d2e69;
+    font-weight: bold;
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px){

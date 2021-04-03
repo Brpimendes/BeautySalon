@@ -140,6 +140,25 @@ section .tab-services{
     border-bottom: 2px dotted black;
 }
 
+main .cta-btn{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    border: none;
+    border-radius: 50%;
+    background-color: #610d75;
+    color: #fff;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+}
+
+main .cta-btn .material-icons{
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
 @media all and (min-width: 320px) and (max-width: 480px){
     header{
         width: 100vw;
@@ -262,6 +281,7 @@ section .tab-services{
     main div.cta-btn{
         display: inline-block;
         width: 100%;
+        height: unset;
         border-radius: 10px;
         text-align: center;
         background-color: #942b88;
@@ -269,6 +289,7 @@ section .tab-services{
         font-size: 18px;
         cursor: pointer;
         transition: all .254s ease;
+        position: unset;
     }
 
     main div.cta-btn:hover{
@@ -277,7 +298,8 @@ section .tab-services{
         font-weight: bold;
     }
 
-    main div.cta-btn span{
+    main div.cta-btn .material-icons{
+        display: inherit;
         transform: translate(30px, 5px);
     }
 
@@ -288,13 +310,7 @@ section .tab-services{
 }
 
 @media all and (min-width: 480px) and (max-width: 720px){
-    
 }
 
-@media screen and (min-width: 720px) and (max-width: 1366px){
-
-}
-
-@media screen and (min-width: 1366px){
-
+@media screen and (min-width: 720px) and (max-width: 1280px){
 }

@@ -27,6 +27,7 @@ function divCtaBtn(){
 
     divCtaBtn.appendChild(spnMaterial)
     divCtaBtn.appendChild(linkAgendamento)
+    divCtaBtn.setAttribute('title', 'Realizar Agendamento')
 }
 
 function agendarHorario(){

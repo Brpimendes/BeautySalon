@@ -44,8 +44,8 @@
                     <ul>
                         <li><a href="cadastro.html"> Meu Perfil</a></li>
                         <li><a href="agendamento.html"> Meus Agendamentos</a></li>
-                        <li><a href="cadCliente.html">Cadastro de Cliente</a></li>
-                        <li><a href="cadFormaPagamento.html">Cadastro das Formas de Pagamento</a></li>
+                        <li><a href="cadCliente.html">Cadastrar Cliente</a></li>
+                        <li><a href="cadFormaPagamento.html">Cadastrar Formas de Pagamento</a></li>
                         <li><a href="cadFuncao.html">Cadastrar Função</a></li>
                         <li><a href="cadProfissional.html">Cadastrar Profissional</a></li>
                         <li><a href="cadProfissionalFuncao.html">Relação Profissional-Função</a></li>
@@ -59,29 +59,38 @@
                 <div class="cadastro-form">
                     <h1>Cadastro de Profissional</h1>
                     <form class="form" action="post">
-                        <input type="hidden" name="id" >
+                        <label for="nome">
+                            <span>Nome</span>
+                            <input type="text" name="nome" placeholder="Entre com o nome completo"/>
+                        </label>
 
-                        <label for="nome">Nome</label>
-                        <input type="text" name="nome" />
+                        <label for="data_nasc">
+                            <span>Data Nascimento</span>
+                            <input type="date" name="data_nasc" />
+                        </label>
 
-                        <label for="data_nasc">Data Nascimento</label>
-                        <input type="date" name="data_nasc" />
+                        <label for="cpf">
+                            <span>CPF</span>
+                            <input type="text" name="cpf" placeholder="Apenas números"/>
+                        </label>
 
-                        <label for="cpf">CPF</label>
-                        <input type="text" name="cpf" />
+                        <label for="telefone">
+                            <span>Telefone</span>
+                            <input type="text" name="telefone" placeholder="Apenas números"/>
+                        </label>
 
-                        <label for="telefone">Telefone</label>
-                        <input type="text" name="telefone" />
+                        <label for="email">
+                            <span>Email</span>
+                            <input type="email" name="email" placeholder="example@mail.com"/>
+                        </label>
 
-                        <label for="email">Email</label>
-                        <input type="email" name="email" />
-
-                        <label for="senha">Senha</label>
-                        <input type="password" name="senha">
+                        <label for="senha">
+                            <span>Senha</span>
+                            <input type="password" name="senha">
+                        </label>
 
                         <div class="buttons">
                             <button name="acao" value="cadastrar">Cadastrar</button>
-                            <button name="acao" value="listar">Listar</button>
                             <button name="acao" value="alterar">Alterar</button>
                         </div>
                     </form>
