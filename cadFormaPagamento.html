@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Forma de Pagamento</title>
     <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/cadFormaPagamento.css">
     <link rel="stylesheet" href="css/table.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -56,16 +57,20 @@
             </div>
 
             <div class="main-container">
+                <div class="cadastro-form">
+                    <h1>Cadastro das Formas de Pagamento</h1>
+                    <form class="form" method="post">
+                        <label for="forma_pagamento">
+                            <span>Forma de Pagamento</span>
+                            <input type="text" name="forma_pagamento" value="" />
+                        </label>
 
-                <form method="post">
-                    <input type="hidden" name="id" value="" />
-
-                    <label for="forma_pagamento">Forma de Pagamento</label>
-                    <input type="text" name="forma_pagamento" value="" />
-
-                    <button name="acao" value="cadastrar">Cadastrar</button>
-                    <button name="acao" value="alterar">Alterar</button>
-                </form>
+                        <div class="buttons">
+                            <button name="acao" value="cadastrar">Cadastrar</button>
+                            <button name="acao" value="alterar">Alterar</button>
+                        </div>
+                    </form>
+                </div>
 
                 <div class="table">
                     <table>
