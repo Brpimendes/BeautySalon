@@ -31,5 +31,9 @@ function divCtaBtn(){
 }
 
 function agendarHorario(){
-    alert('Vamos agendar essa bagaça')
+    if( !localStorage.getItem(cliente_id) ){
+        location.href = '../login.html'
+    } else {
+        location.href = '../agendamento.html'
+    }
 }

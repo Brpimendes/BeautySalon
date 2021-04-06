@@ -36,12 +36,11 @@
 
 .cadastro-form{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 500px;
     height: 100%;
     background-color: #0003;
-    /* border-radius: 20px; */
-    flex-direction: column;
-    align-items: center;
 }
 
 .cadastro-form span{

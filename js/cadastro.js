@@ -22,7 +22,7 @@ function cadastrarClientes(){
         return
     }
 
-    if( inputNome.value && inputCPF.value && inputDataNascimento.value && sexo && inputTelefone.value && inputEmail.value && inputSenha.value && inputRepSenha.value ){
+    if( inputNome.value && inputCPF.value && inputDataNascimento.value && selectSexo.value && inputTelefone.value && inputEmail.value && inputSenha.value && inputRepSenha.value ){
 
     } else {
         alert('Todos os campos são obrigatórios')
