@@ -1,0 +1,362 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body{
+    background-image: url('../img/background_salao.jpg');
+} */
+
+li{
+    display: inline;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+.out-container{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+.buttons{
+    border: none;
+    background-color: #610d75;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* ESTILO DO CABEÇALHO */
+header{
+    width: 100vw;
+}
+
+header .menu-fixed{
+    position: fixed;
+    z-index: 1;
+}
+
+header div.contacts{
+    height: 80px;
+    width: 100vw;
+    color: #fff;
+    background-color: #610d75;
+    position: relative;
+}
+
+header div.contacts .logo{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+}
+
+header div.contacts .logo img{
+    display: inline;
+    width: 100%;
+    height: 100%;
+    filter: brightness(10);
+}
+
+header div.contacts .direct-contacts{
+    display: inline;
+    position: absolute;
+    top: 30px;
+    margin-left: 30px;
+}
+
+header div.contacts .direct-contacts span.material-icons{
+    margin-left: 40px;
+}
+
+header div.contacts .direct-contacts p{
+    display: inline-block;
+    transform: translateY(-5px);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header div.contacts .hamburguer{
+    display: none;
+}
+
+header div.contacts nav{
+    position: absolute;
+    top: 30px;
+    right: 40px;
+}
+
+header div.contacts nav ul{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+}
+
+header div.contacts nav ul li{
+    display: inline-block;
+    height: 30px;
+    color: #fff;
+    transition: all .127s ease;
+}
+
+header div.contacts nav ul li:hover{
+    font-weight: bolder;
+    color: #fcff46;
+}
+
+header div.contacts nav ul li a{
+    display: inline-block;
+    margin-left: 5px;
+    transform: translateY(-7px);
+    color: inherit;
+}
+
+main{
+    margin-top: 80px;
+}
+
+main .menu-lateral{
+    display: block;
+    width: 17%;
+    height: calc(100vh - 80px);
+    position: fixed;
+    background: #6a346a;
+    padding: 15px 0;
+}
+
+main .menu-lateral a{
+    display: block;
+    padding: 15px;
+    font-size: 20px;
+    color: #fff;
+}
+
+main .menu-lateral a:hover{
+    background: #e000e0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main .relatorio-servico.relatorio-servico.main-container{
+    width: 83%;
+    padding: 10px;
+    margin-left: 17%;
+}
+
+main .relatorio-servico.main-container h1{
+    text-align: center;
+}
+
+main .relatorio-servico.main-container .info-select{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+main .relatorio-servico.main-container .info-select .spn-titulo{
+    display: inline-block;
+    width: 250px;
+    margin-right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #6a346a;
+}
+
+main .relatorio-servico.main-container .info-select label{
+    display: inline-block;
+    width: 100%;
+}
+
+main .relatorio-servico.main-container .info-select .select-servico,
+main .relatorio-servico.main-container .info-select .select-profissional,
+main .relatorio-servico.main-container .info-select .select-data{
+    padding: 20px;
+}
+
+main .relatorio-servico.main-container .info-select .spn-titulo + select{
+    display: inline-block;
+    width: calc(100% - 270px);
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+main .relatorio-servico.main-container .info-select .select-data form{
+    display: flex;
+    /* flex-direction: column; */
+}
+
+main .relatorio-servico.main-container .info-select .select-data form label{
+    display: inline-block;
+    width: 33%;
+    min-width: 230px;
+    margin: 10px 0;
+}
+
+main .relatorio-servico.main-container .info-select .select-data form label span{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+main .relatorio-servico.main-container .info-select .select-data form label input{
+    display: inline-block;
+    width: calc(100% - 70px);
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+main .relatorio-servico.main-container .info-select .select-data form .buttons{
+    margin: 10px 0;
+    padding: 0 55px;
+}
+
+main .relatorio-servico.main-container .info-select .select-data form .buttons:hover{
+    margin: 10px 0;
+    padding: 0 51px;
+    font-weight: bold;
+    box-shadow: 4px 4px 10px #abc;
+}
+
+main .buttons-export{
+    margin: 10px 0;
+    text-align: center;
+}
+
+main .buttons-export label{
+    margin: 0 50px;
+}
+
+main .buttons-export .buttons{
+    padding: 10px 30px;
+}
+
+main .buttons-export .buttons:hover{
+    padding: 10px 28px;
+    font-weight: bold;
+    box-shadow: 4px 4px 10px #abc;
+}
+
+main .buttons-export label .material-icons{
+    font-size: 38px;
+}
+
+main .buttons-export label span{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    transform: translateY(10px);
+}
+
+main .buttons-export label span img{
+    height: 100%;
+    width: 100%;
+}
+
+@media all and (min-width: 320px) and (max-width: 480px){
+    main .relatorio-servico.main-container{
+        width: 100%;
+        padding: 10px;
+    }
+
+    main .relatorio-servico.main-container h1 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    main .relatorio-servico.main-container .info-select {
+        width: 100%;
+    }
+
+    main .relatorio-servico.main-container .info-select .select-servico, 
+    main .relatorio-servico.main-container .info-select .select-profissional, 
+    main .relatorio-servico.main-container .info-select .select-data {
+        padding: 10px 0;
+    }
+
+    main .relatorio-servico.main-container .info-select label {
+        display: inline-block;
+        width: 100%;
+    }
+
+    main .relatorio-servico.main-container .info-select .spn-titulo {
+        display: block;
+        width: 100%;
+        font-size: 18px;
+        font-weight: bold;
+        color: #6a346a;
+    }
+
+    main .relatorio-servico.main-container .info-select .spn-titulo + select {
+        display: block;
+        width: 100%;
+        padding: 10px 10px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        background-color: transparent;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    main .relatorio-servico.main-container .info-select .select-data form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .relatorio-servico.main-container .info-select .select-data form label {
+        display: inline-block;
+        width: 100%;
+        min-width: 230px;
+        margin: 10px 0;
+    }
+
+    main .relatorio-servico.main-container .info-select .select-data form label span {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    main .relatorio-servico.main-container .info-select .select-data form label input {
+        display: inline-block;
+        width: calc(100% - 70px);
+        padding: 10px;
+        border: 1px solid;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    main .relatorio-servico.main-container .info-select .select-data form .buttons {
+        margin: 10px 0;
+        padding: 20px 55px;
+    }
+
+    main .buttons-export {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    main .buttons-export label {
+        margin: 10px 0;
+        display: block;
+        width: 100%;
+    }
+
+    main .buttons-export .buttons {
+        padding: 12px;
+        width: 100%;
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px){
+
+}
+
+@media all and (min-width: 768px) and (max-width: 1366px){
+
+}

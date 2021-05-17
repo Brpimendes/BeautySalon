@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatorio de Servicos</title>
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/relatorioServico.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="out-container">
+        <header>
+            <div class="menu-fixed">
+                <div class="contacts">
+                    <div class="logo">
+                        <img src="img/logo.png" alt="logo salão Beauty">
+                    </div>
+    
+                    <div class="direct-contacts">
+                        <span class="material-icons">local_phone</span> <p> (21)2404-0695 </p>
+                        <span class="material-icons">mail</span> <p> E-mail: beauty_salao@gmail.com </p>
+                    </div>
+    
+                    <div class="hamburguer">
+                        <span class="material-icons">menu</span>
+                    </div>
+    
+                    <nav>
+                        <ul>
+                            <li><span class="material-icons">logout</span><a href="index.html">Sair</a></li>
+                            <li><span class="material-icons">person_pin</span><a href="principal.html">Página Principal</a></li>
+                            <li><span class="material-icons">attach_money</span><a href="tabelaPreco.html">Tabela de Preços</a></li>
+                            <li><span class="material-icons">shopping_cart</span><a href="#contact">Carrinho</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main> 
+            <div class="menu-lateral">
+                <nav>
+                    <ul>
+                        <li><a href="cadastro.html"> Meu Perfil</a></li>
+                        <li><a href="agendamento.html"> Meus Agendamentos</a></li>
+                        <li><a href="cadCliente.html">Cadastrar Cliente</a></li>
+                        <li><a href="cadFormaPagamento.html">Cadastrar Formas de Pagamento</a></li>
+                        <li><a href="cadFuncao.html">Cadastrar Função</a></li>
+                        <li><a href="cadProfissional.html">Cadastrar Profissional</a></li>
+                        <li><a href="cadProfissionalFuncao.html">Relação Profissional-Função</a></li>
+                        <li><a href="cadServico.html">Cadastrar Serviço</a></li>
+                        <li><a href="relatorioServico.html">Relatório Serviço</a></li>
+                        <li><a href="relatorioComissoes.html">Relatório Comissões</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="relatorio-servico main-container">
+                <h1>Relatorio de Serviços</h1>
+                
+                <section class="info-select">
+                    <div class="select-servico">
+                        <label for="">
+                            <span class="spn-titulo">Selecione o serviço</span>
+                            <select name="" id="">
+                                <option value="">Selecione o serviço</option>
+                                <option value="">Corte Feminino</option>
+                                <option value="">Corte Masculino</option>
+                                <option value="">Corte Infantil</option>
+                                <option value="">Todos os serviços</option>
+                            </select>
+                        </label>
+                    </div>
+    
+                    <div class="select-profissional">
+                        <label for="">
+                            <span class="spn-titulo">Selecione o profissional</span>
+                            <select name="" id="">
+                                <option value="">Selecione o profissional</option>
+                                <option value="">Saulo Minutinho</option>
+                                <option value="">Rogerio Almeida</option>
+                                <option value="">Suellen Leite</option>
+                            </select>
+                        </label>
+                    </div>
+    
+                    <div class="select-data">
+                        <span class="spn-titulo">Selecione o período</span>
+                        <form>
+                            <label for="">
+                                <span>De:</span>
+                                <input type="date" />
+                            </label>
+
+                            <label for="">
+                                <span>Até:</span>
+                                <input type="date" />
+                            </label>
+
+                            <button class="buttons" type="submit">Gerar Relatório</button>
+                        </form>
+                    </div>
+                </section>
+
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Profissional</th>
+                                <th>Data</th>
+                                <th>Hora</th>
+                                <th>Serviço</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Rogerio Almeida</td>
+                                <td>12/05/2021</td>
+                                <td>15:00</td>
+                                <td>Corte Feminino</td>
+                            </tr>
+                            <tr>
+                                <td>Rogerio Almeida</td>
+                                <td>12/05/2021</td>
+                                <td>16:30</td>
+                                <td>Corte Feminino</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="buttons-export">
+                    <label for="">
+                        <button class="buttons" type="submit">Imprimir</button>
+                        <span class="material-icons">file_present</span>
+                    </label>
+
+                    <label for="">
+                        <button class="buttons" type="submit">Exportar para Excel</button>
+                        <span><img src="/img/xlsx-file-format-extension.svg" alt="icone Excel"></span>
+                    </label>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
