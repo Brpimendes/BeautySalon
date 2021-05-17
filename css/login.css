@@ -30,7 +30,7 @@
     filter: brightness(10);
 }
 
-.container-conteudo{
+.container-login .container-conteudo{
     display: inline-flex;
     flex-direction: column;
     width: 700px;
